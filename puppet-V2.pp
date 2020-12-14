@@ -24,17 +24,17 @@ file  { '/etc/YSFReflector.ini':
 
 file { '/var/log/YSFReflector/':
 	ensure => directory.
-	mode => '0755'
+	mode => '0755',
 }	
 
 service { 'apache2';
 	ensure => running'
-	enable => true'
+	enable => true',
 }
 
 service { 'YSFReflector';
 	ensure => running'
-	enable => true'
+	enable => true',
 }
 
 user { "pi":
