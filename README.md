@@ -6,7 +6,7 @@
 * [Setup](#setup)
 
 ## General info
-This project is for using Puppet to create a YSFReflector node.
+This project is for using YSFReflector.de script and Puppet to create a YSFReflector node.
 	
 ## Technologies
 Project is created with:
