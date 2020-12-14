@@ -17,7 +17,7 @@ package { 'libapache2-mod-php7.1':
 
 file  { '/etc/YSFReflector.ini':
 	ensure => present,
-	source => 'https://github.com/AJ6EE/YSFReflector/blob/main/YSFReflector.ini',
+	source => '/root/YSFReflector/YSFReflector.ini',
 	mode => '0644',
 	notify => Service['YSFReflector.sh'],
 }
