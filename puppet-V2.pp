@@ -7,7 +7,7 @@ package { 'php-common':
 	ensure => installed,
 }
 
-package { 'php-7.1-cgi':
+package { 'php7.1-cgi':
 	ensure => installed,
 }
 
