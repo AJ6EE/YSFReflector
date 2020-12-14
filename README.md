@@ -10,7 +10,7 @@ This project is for using YSFReflector.de script and Puppet to create a YSFRefle
 	
 ## Technologies
 Project is created with:
-* YSMReflector
+* YSFReflector
 * Puppet
 
 	
