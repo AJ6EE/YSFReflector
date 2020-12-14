@@ -23,7 +23,7 @@ file  { '/etc/YSFReflector.ini':
 }
 
 file { '/var/log/YSFReflector/':
-	ensure => directory.
+	ensure => directory,
 	mode => '0755',
 }	
 
