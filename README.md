@@ -22,7 +22,7 @@ $ git clone https://github.com/AJ6EE/YSFReflector
 $ cd YSFReflector
 $ chmod a+x install.sh
 $ bash ./install.sh
-$ edit the YSFReflector.ini for your node. Set the following rows as needed:
+$ edit the YSFReflector.ini for your node. Set the following lines as needed:
 * Name:  
 * Description: 
 * Logging: 
