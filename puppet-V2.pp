@@ -19,7 +19,6 @@ file  { '/etc/YSFReflector.ini':
 	ensure => present,
 	source => '/root/YSFReflector/YSFReflector.ini',
 	mode => '0644',
-	notify => Service['YSFReflector.sh'],
 }
 
 file { '/var/log/YSFReflector/':
