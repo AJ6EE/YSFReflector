@@ -27,12 +27,12 @@ file { '/var/log/YSFReflector/':
 	mode => '0755',
 }	
 
-service { 'apache2';
+service { 'apache2':
 	ensure => running'
 	enable => true',
 }
 
-service { 'YSFReflector';
+service { 'YSFReflector':
 	ensure => running'
 	enable => true',
 }
