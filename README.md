@@ -34,8 +34,11 @@ $
 *   FileLevel=1   ### This must be 1 or the dashboard will not work
 *   Port=41000   ###  Your Port. Default=41000
 $
-$ ### Leave the YSFReflector.ini file in the YSFReflector folder. Do not move it to /etc. Puppet will do that
+$ ### Leave the YSFReflector.ini file in the YSFReflector folder. Do not move it to /etc. Puppet will do that.
 $
+$ ###  Rename the YSFReflector init script so puppet can start it. 
+$ mv /etc/init.d/YSFReflector.sh /etc/init.d/YSFReflector
+$ 
 $ ###  Let's build the Dashboard. Stay in the /root/YSFReflector directory.
 $ git clone https://github.com/dg9vh/YSFReflector-Dashboard.git
 $ cp -R YSFReflector-Dashboard/* /var/www/html/
@@ -50,6 +53,9 @@ $ ### just as they are shown. Save when done.
 $ ###Your Dashboard is now done but we need to remove the setup.php file:
 $ puppet apply --noop puppet-drop-setup.pp  ### pre flight check. If no errors run the next command
 $ puppet apply puppet-drop-setup.pp
+$ 
+$ ### Note: I have inconsistencies with puppet starting the YSFReflector service. 
+$ ### You can use 'ps ax | grep YSF' to see if it is running.  If not '/etc/init.d/YSFReflector start' will start it.  
 $
 $ ### That is all :) Your node is up and running! Congratulations!  73 de AJ6EE
 ```
