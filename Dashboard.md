@@ -1,5 +1,5 @@
 ---
-Fields for dashboard setup:
+Fields for dashboard setup.php:
 ---
  /var/log/YSFReflector
  ---
