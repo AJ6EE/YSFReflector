@@ -28,10 +28,10 @@ $ git clone https://github.com/AJ6EE/YSFReflector
 $ cd YSFReflector
 $ edit (vi, nano etc) the YSFReflector.ini file. Edit only the following lines with your information and save the file:
 $
-*  Name=Your-Callsign  ##your callsign
-*  Description=Your-Description   ### your description
+*  Name=Your-Callsign  ##Your-Callsign
+*  Description=Your-Description   ### Your Node Description. 18 characters MAX
 *  FileLevel=1   ### This must be 1 or the dashboard will not work
-*  Port=41000   ###  your port
+*  Port=41000   ###  Your Port. Default=41000
 $
 $  ### Leave the YSFReflector.ini file in the YSFReflector folder. Do not move it to /etc. Puppet will do that
 $
@@ -41,6 +41,6 @@ $ cp -R YSFReflector-Dashboard/* /var/www/html/
 $  ### Don't worry about permissions for /var/www/html . Puppet will do that. 
 $
 $ apt-get install -y puppet
-$ puppet apply --noop puppet-V2.pp ### check the output for errors. If no errors run the next command
+$ puppet apply --noop puppet-V2.pp ### pre flight check. If no errors run the next command
 $ puppet apply puppet-V2.pp
 ```
