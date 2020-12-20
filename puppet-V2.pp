@@ -52,7 +52,7 @@ file { "/var/www/html":
   recurse => true, # enable recursive directory management
   owner => "www-data",
   group => "www-data",
-  
+  mode => 0755, 
   }
 
 
