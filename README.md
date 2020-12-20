@@ -24,7 +24,12 @@ $ sudo su -  ### lets be root
 $ ### First lets build the YSFReflector binary, init script and config file  ### 
 $ wget https://register.ysfreflector.de/install.sh
 $ chmod a+x install.sh
-$ bash ./install.sh   ### type in a node name and description but we will be editing /etc/YSFReflector.ini below
+$ bash ./install.sh   ### type in a node name and description but we will be editing /etc/YSFReflector.ini below.
+$
+$ ###  Rename the YSFReflector init script so puppet can hopefully start it. See NOTE: at the EOF.
+$ mv /etc/init.d/YSFReflector.sh /etc/init.d/YSFReflector
+$ 
+$ ### Lets get my code and be ready to do some puppet magic later on.
 $ git clone https://github.com/AJ6EE/YSFReflector
 $ cd YSFReflector
 $ edit (vi, nano etc) the YSFReflector.ini file. Edit only the following lines with your information and save the file:
@@ -35,10 +40,6 @@ $
 *   Port=41000   ###  Your Port. Default=41000
 $
 $ ### Leave the YSFReflector.ini file in the YSFReflector folder. Do not move it to /etc. Puppet will do that.
-$
-$ ###  Rename the YSFReflector init script so puppet can start it. 
-$ mv /etc/init.d/YSFReflector.sh /etc/init.d/YSFReflector
-$ 
 $ ###  Let's build the Dashboard. Stay in the /root/YSFReflector directory.
 $ git clone https://github.com/dg9vh/YSFReflector-Dashboard.git
 $ cp -R YSFReflector-Dashboard/* /var/www/html/
