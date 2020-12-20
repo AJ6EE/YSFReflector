@@ -43,9 +43,17 @@ user { "pi":
     groups => [www-data],
 }
 
+file  { '/var/www/html/index.html':
+	ensure => absent,
+}
 
-
-
+file { "/var/www/html":
+  ensure => directory, # so make this a directory
+  recurse => true, # enable recursive directory management
+  owner => "www-data",
+  group => "www-data",
+  
+  }
 
 
 
