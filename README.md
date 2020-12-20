@@ -20,7 +20,7 @@ We will use the Quick-Install script from https://register.ysfreflector.de ,
 YSFReflector-Dashboard from https://github.com/dg9vh/YSFReflector-Dashboard and my puppet manifests.
 Comments are shown with ###
 ```
-$ sudo su -
+$ sudo su -  ### lets be root
 $ ### First lets build the YSFReflector binary, init script and config file  ### 
 $ wget https://register.ysfreflector.de/install.sh
 $ chmod a+x install.sh
