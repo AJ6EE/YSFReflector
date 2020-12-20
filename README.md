@@ -49,14 +49,15 @@ $
 $ apt-get install -y puppet
 $ puppet apply --noop puppet-V2.pp ### pre flight check. If no errors run the next command
 $ puppet apply puppet-V2.pp  
-$ ### This will install apache2, php etc and start apache2 and hopefully the YSFReflector service. Also move YSFReflcetor.ini to /etc
+$ ### This will install apache2, php etc and start apache2 and hopefully the YSFReflector service. Also move YSFReflcetor.ini to /etc ,
+$ ### add the user 'pi' to the www-data group, set the permissions on the /var/www/html folder and remove /var/www/html/index.html [we don't want it there any more]
 $
 $ ### Go to http://ip-address-of-node/setup.php  ### the fields look like they are filled in but you have to type in all fields
 $ ### just as they are shown. Save when done.
 $ ###Your Dashboard is now done but we need to remove the setup.php file:
 $ puppet apply --noop puppet-drop-setup.pp  ### pre flight check. If no errors run the next command
 $ puppet apply puppet-drop-setup.pp
-$ 
+$ ## Refresh the web browser and you should not see any warnings. 
 $ ### Note: I have inconsistencies with puppet starting the YSFReflector service. 
 $ ### You can use 'ps ax | grep YSF' to see if it is running or just:
 $
