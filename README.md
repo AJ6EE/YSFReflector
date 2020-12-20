@@ -16,7 +16,8 @@ Project is created with:
 
 	
 ## Setup
-We will use the Quick-Install script from YSFReflector.de and my puppet manifest.
+We will use the Quick-Install script from https://register.ysfreflector.de , 
+YSFReflector-Dashboard from https://github.com/dg9vh/YSFReflector-Dashboard and my puppet manifests.
 Comments are shown with ###
 ```
 $ sudo su -
