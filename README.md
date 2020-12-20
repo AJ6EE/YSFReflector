@@ -45,10 +45,11 @@ $ apt-get install -y puppet
 $ puppet apply --noop puppet-V2.pp ### pre flight check. If no errors run the next command
 $ puppet apply puppet-V2.pp
 $
-$ Go to http://ip-address-of-node/setup.php  ### the fields look like they are filled in but you have to type in all fields manually. Save when done.
-$ Your Dashboard is now done but we need to remove the setup.php file:
+$ ### Go to http://ip-address-of-node/setup.php  ### the fields look like they are filled in but you have to type in all fields
+$ ### just as they are shown. Save when done.
+$ ###Your Dashboard is now done but we need to remove the setup.php file:
 $ puppet apply --noop puppet-drop-setup.pp  ### pre flight check. If no errors run the next command
-$ puppet apply  puppet-drop-setup.pp
+$ puppet apply puppet-drop-setup.pp
 $
-$ That is all :) Your node is up and running! Congratulations!  73 de AJ6EE
+$ ### That is all :) Your node is up and running! Congratulations!  73 de AJ6EE
 ```
