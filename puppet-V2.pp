@@ -48,8 +48,8 @@ file  { '/var/www/html/index.html':
 }
 
 file { "/var/www/html":
-  ensure => directory, # so make this a directory
-  recurse => true, # enable recursive directory management
+  ensure => directory,
+  recurse => true,
   owner => "www-data",
   group => "www-data",
   mode => '0755', 
