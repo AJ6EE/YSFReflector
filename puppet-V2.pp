@@ -31,7 +31,7 @@ service { 'apache2':
 	enable => true,
 }
 
-service { 'YSFReflector':
+service { 'YSFReflector.sh':
 	ensure => running,
 	enable => true,
 }
