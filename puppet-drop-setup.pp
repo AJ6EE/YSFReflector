@@ -1,3 +1,1 @@
-file  { '/var/www/html/setup.php':
-	ensure => absent,
-}
+file{ '/var/www/html/setup.php' :ensure => absent, }
