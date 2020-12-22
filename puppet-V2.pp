@@ -1,10 +1,10 @@
 
-$dependencies = {
-'apache2',
-'php-common',
-'php7.1-cgi',
-'libapache2-mod-php7.1',
-}
+$dependencies = [
+  'apache2',
+  'php-common',
+  'php7.1-cgi',
+  'libapache2-mod-php7.1',
+]
 
 package { $dependencies:
 	ensure => installed'
@@ -21,10 +21,10 @@ file { '/var/log/YSFReflector/':
 	mode => '0755',
 }	
 
-$svcs = {
+$svcs = [
 'apache2',
 'YSFReflector',
-}
+]
 
 service { $svcs':
 	ensure => running,
