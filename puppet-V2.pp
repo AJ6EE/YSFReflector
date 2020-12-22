@@ -1,18 +1,13 @@
 
-package { 'apache2':
-	ensure => installed,
+$dependencies = {
+'apache2',
+'php-common',
+'php7.1-cgi',
+'libapache2-mod-php7.1',
 }
 
-package { 'php-common':
-	ensure => installed,
-}
-
-package { 'php7.1-cgi':
-	ensure => installed,
-}
-
-package { 'libapache2-mod-php7.1':
-	ensure => installed,
+package { $dependencies:
+	ensure => installed'
 }
 
 file  { '/etc/YSFReflector.ini':
@@ -26,12 +21,12 @@ file { '/var/log/YSFReflector/':
 	mode => '0755',
 }	
 
-service { 'apache2':
-	ensure => running,
-	enable => true,
+$svcs = {
+'apache2',
+'YSFReflector',
 }
 
-service { 'YSFReflector':
+service { $svcs':
 	ensure => running,
 	enable => true,
 }
