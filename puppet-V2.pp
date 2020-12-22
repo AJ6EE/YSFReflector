@@ -26,7 +26,7 @@ $svcs = [
 'YSFReflector',
 ]
 
-service { $svcs':
+service { $svcs:
 	ensure => running,
 	enable => true,
 }
