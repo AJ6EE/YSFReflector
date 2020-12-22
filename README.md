@@ -25,32 +25,32 @@ $ sudo su -
 $ ### Build the YSFReflector binary, init script and config file  ### 
 $ wget https://register.ysfreflector.de/install.sh
 $ chmod a+x install.sh
-$ bash ./install.sh   ### type in a node name and description but we will be editing /etc/YSFReflector.ini below.
+$ bash ./install.sh   ### type in a node name and description but we will be editing /root/YSFReflector/YSFReflector.ini file and puppet will move it to /etc.
 $---
 $ ###  Rename the YSFReflector init script so puppet can hopefully start it. See NOTE: at the EOF.
 $ mv /etc/init.d/YSFReflector.sh /etc/init.d/YSFReflector
 $ ---
-$ ### Get my code and be ready to do some puppet magic later on.
+$ ### Get my code 
 $ git clone https://github.com/AJ6EE/YSFReflector
 $ cd YSFReflector
 $ ---
-$ ### Edit (vi, nano etc) the YSFReflector.ini file. Edit only the following lines with your information and save the file:
+$ ### Edit (vi, nano etc) the YSFReflector.ini file. Edit the following lines with your information and save the file:
 $ ---
 *   Name=Your-Callsign  ### Your-Callsign
 *   Description=Your-Description   ### Your Node Description. 18 characters MAX
 *   FileLevel=1   ### This must be 1 or the dashboard will not work
 *   Port=41000   ###  Your Port. Default=41000
 $ ---
-$ ### Leave the YSFReflector.ini file in the YSFReflector folder. Do not move it to /etc. Puppet will do that.
+$ ### Leave the YSFReflector.ini file in the /root/YSFReflector folder. Puppet will move it later.
 $ ###  Let's build the Dashboard. Stay in the /root/YSFReflector directory.
 $ git clone https://github.com/dg9vh/YSFReflector-Dashboard.git
 $ cp -R YSFReflector-Dashboard/* /var/www/html/
-$ ### Don't worry about permissions for /var/www/html . Puppet will do that later. 
+$ ### Don't worry about permissions for /var/www/html . Puppet will set them later. 
 $ ---
 $ apt-get install -y puppet
 $ puppet apply --noop puppet-V2.pp ### pre flight check. If no errors run the next command
 $ puppet apply puppet-V2.pp  
-$ ### This will install apache2, php etc and start apache2 and hopefully the YSFReflector service. Also move YSFReflcetor.ini to /etc ,
+$ ### This will install apache2, php and dependencies then start apache2 and the YSFReflector service, move YSFReflcetor.ini to /etc,
 $ ### add the user 'pi' to the www-data group, set the permissions on the /var/www/html folder and remove /var/www/html/index.html [we don't want it there any more]
 $ ---
 $ ### Go to http://ip-address-of-node/setup.php  ### the fields look like they are filled in but you have to type in all fields
