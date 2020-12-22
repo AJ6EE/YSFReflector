@@ -1,7 +1,7 @@
 
 $dependencies = [
   'apache2',
-  'php-7.1',
+  'php7.1',
   'php-common',
   'php7.1-cgi',
   'libapache2-mod-php7.1',
