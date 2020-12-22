@@ -7,7 +7,7 @@ $dependencies = [
 ]
 
 package { $dependencies:
-	ensure => installed'
+	ensure => installed,
 }
 
 file  { '/etc/YSFReflector.ini':
