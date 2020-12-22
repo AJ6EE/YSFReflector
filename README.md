@@ -53,8 +53,8 @@ $ puppet apply puppet-V2.pp
 $ ### This will install apache2, php and dependencies then start apache2 and the YSFReflector service, move YSFReflcetor.ini to /etc,
 $ ### add the user 'pi' to the www-data group, set the permissions on the /var/www/html folder and remove /var/www/html/index.html [we don't want it there any more]
 $ ---
-$ ### Go to http://ip-address-of-node/setup.php  ### the fields look like they are filled in but you have to type in all fields
-$ ### just as they are shown. Save when done. See the Dashboard.md file so you can copy/paste the fields. 
+$ ### Go to http://ip-address-of-node/setup.php  ### the fields look like they are filled in but you have to type in all fields.
+$ ###               See the Dashboard.md file so you can copy/paste the fields. 
 $ ###Your Dashboard is now done but we need to remove the setup.php file:
 $ puppet apply --noop puppet-drop-setup.pp  ### pre flight check. If no errors run the next command
 $ puppet apply puppet-drop-setup.pp
