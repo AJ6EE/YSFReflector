@@ -1,4 +1,4 @@
-## YSFReflector setup on Raspberry Pi 3 using YSFReflector.de script and puppet by AJ6EE
+## YSFReflector setup on Raspberry Pi 3 using YSFReflector.de script, YSFReflector-Dashboard software and puppet code by AJ6EE
 
 ## Table of contents
 * [General info](#general-info)
